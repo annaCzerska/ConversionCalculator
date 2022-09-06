@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/txtNumber"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Enter number"
+        android:minHeight="48dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnChange"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toEndOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintTop_toTopOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintVertical_bias="0.445"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtUnitFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/txtMain"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumber"
+        app:layout_constraintStart_toEndOf="@+id/txtNumber"
+        app:layout_constraintTop_toTopOf="@+id/txtNumber"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <Spinner
+        android:id="@+id/spinnerOptions"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/txtMain"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerUnitsFrom"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@color/txtMain"
+        android:minHeight="48dp"
+        android:textColor="#16826c"
+        app:layout_constraintStart_toStartOf="@+id/spinnerOptions"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerUnitsTo"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:backgroundTint="@color/txtMain"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsFrom"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoText="false"
+        android:text=""
+        android:textColor="@color/txtMain"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerUnitsTo"
+        app:layout_constraintStart_toStartOf="@+id/spinnerUnitsTo"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsTo" />
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnConvertClick"
+        android:text="Convert"
+        android:backgroundTint="#493264"
+        android:textColor="#DDDDDD"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumber"
+        app:layout_constraintStart_toStartOf="@+id/txtNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
+
+    <TextView
+        android:id="@+id/txtFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerOptions"
+        app:layout_constraintVertical_bias="0.571" />
+
+
+
+    <Button
+        android:id="@+id/btnChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:onClick="onBtnChangeClick"
+        app:icon="@drawable/exchange"
+        app:iconSize="40dp"
+        app:iconTint="#0E6251"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerUnitsTo"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintStart_toStartOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsFrom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
