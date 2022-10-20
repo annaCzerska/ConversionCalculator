@@ -5,7 +5,7 @@
     android:background="@drawable/spinner_background"
     android:padding="15dp"
     android:paddingStart="2dp"
-    android:textColor="#4C3A0E"
+    android:textColor="@color/white"
     android:textSize="17dp">
 
 

@@ -10,20 +10,17 @@
 
     <EditText
         android:id="@+id/txtNumber"
-        android:layout_width="182dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:ems="10"
+        android:backgroundTint="@color/black"
         android:hint="Enter number"
-        android:minHeight="48dp"
+        android:minHeight="40dp"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/btnChange"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerUnitsFrom"
         app:layout_constraintStart_toEndOf="@+id/spinnerUnitsFrom"
         app:layout_constraintTop_toTopOf="@+id/spinnerUnitsFrom"
-        app:layout_constraintVertical_bias="0.445"
         tools:ignore="TextContrastCheck" />
 
     <TextView
@@ -31,19 +28,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textColor="@color/txtMain"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="@+id/txtNumber"
         app:layout_constraintStart_toEndOf="@+id/txtNumber"
-        app:layout_constraintTop_toTopOf="@+id/txtNumber"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintTop_toTopOf="@+id/txtNumber" />
 
     <Spinner
         android:id="@+id/spinnerOptions"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/txtMain"
+        android:backgroundTint="@color/white"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerUnitsFrom"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,29 +47,55 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <View
+        android:id="@+id/_1"
+        android:layout_width="380dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2d2e2e"
+        app:layout_constraintStart_toStartOf="@+id/spinnerOptions"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerOptions" />
+
     <Spinner
         android:id="@+id/spinnerUnitsFrom"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:backgroundTint="@color/txtMain"
+        android:backgroundTint="@color/white"
         android:minHeight="48dp"
         android:textColor="#16826c"
         app:layout_constraintStart_toStartOf="@+id/spinnerOptions"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
+    <View
+        android:id="@+id/_2"
+        android:layout_width="380dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2d2e2e"
+        app:layout_constraintStart_toStartOf="@+id/spinnerUnitsFrom"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsFrom" />
+
 
     <Spinner
         android:id="@+id/spinnerUnitsTo"
-        android:layout_width="380dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:backgroundTint="@color/txtMain"
+        android:backgroundTint="@color/white"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spinnerUnitsFrom"
         app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsFrom"
         tools:ignore="SpeakableTextPresentCheck" />
+    <View
+        android:id="@+id/_3"
+        android:layout_width="380dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2d2e2e"
+        app:layout_constraintStart_toStartOf="@+id/spinnerUnitsTo"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsTo" />
+
 
     <TextView
         android:id="@+id/textResult"
@@ -82,10 +103,9 @@
         android:layout_height="wrap_content"
         android:autoText="false"
         android:text=""
-        android:textColor="@color/txtMain"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerUnitsTo"
         app:layout_constraintStart_toStartOf="@+id/spinnerUnitsTo"
         app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsTo" />
 
@@ -93,29 +113,14 @@
         android:id="@+id/buttonConvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/txtMain"
         android:onClick="onBtnConvertClick"
         android:text="Convert"
-        android:backgroundTint="#493264"
         android:textColor="#DDDDDD"
         app:layout_constraintEnd_toEndOf="@+id/txtNumber"
         app:layout_constraintStart_toStartOf="@+id/txtNumber"
         app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
-
-    <TextView
-        android:id="@+id/txtFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="From"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerUnitsFrom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerOptions"
-        app:layout_constraintVertical_bias="0.571" />
-
 
 
     <Button
@@ -126,9 +131,8 @@
         android:onClick="onBtnChangeClick"
         app:icon="@drawable/exchange"
         app:iconSize="40dp"
-        app:iconTint="#0E6251"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/spinnerUnitsTo"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerUnitsFrom"
         app:layout_constraintStart_toStartOf="@+id/spinnerUnitsFrom"
         app:layout_constraintTop_toBottomOf="@+id/spinnerUnitsFrom" />
 
